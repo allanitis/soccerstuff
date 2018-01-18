@@ -2,3 +2,7 @@
   position: fixed;
   z-index: 99;
 }
+
+h1.standard {
+  font-size: 30px;
+}
