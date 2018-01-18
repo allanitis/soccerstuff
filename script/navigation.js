@@ -1,6 +1,6 @@
 var links = [
   {
-    name: '<strong>josh</strong>and<strong>james</strong>',
+    name: '<strong>soccer</strong>stuff',
     href: '/'
   }, {
     name: 'Forwards',
