@@ -11,6 +11,7 @@ When creating a page, make sure that your page meets these requirements:
 - Cited Image
 - Link to a relevant video
 - At least one header and paragraph
+  - Each `<h1>` tag needs to have same class name. Insert `class="standard"` into each tag like so: `<h1 class="standard">`
 - External CSS
 - JavaScript feature
 
