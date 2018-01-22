@@ -1,6 +1,7 @@
 ._navigation.standard {
   position: fixed;
   z-index: 99;
+  width: 100%;
 }
 
 h1.standard {
