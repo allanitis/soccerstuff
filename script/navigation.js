@@ -14,6 +14,9 @@ var links = [
   }, {
     name: 'Goalkeepers',
     href: '/goalkeepers/'
+  }, {
+    name: '3D Printing',
+    href: '/printing/'
   }
 ];
 
