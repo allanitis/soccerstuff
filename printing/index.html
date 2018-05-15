@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Printing</title>
+    <title>Welcome</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://smith2021.github.io/hermes/w3.css"/>
     <link rel="stylesheet" href="main.css"/>
@@ -55,7 +55,7 @@
       <div class="w3-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/jeKv0aJK03Y?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
       <h3>Images // SD Card Removal</h3>
-      <div class="w3-display-container w3-light-grey" style="height:300px;">
+      <div class="w3-display-container w3-light-grey" id="slideShowDisplay">
         <div class="w3-display-left w3-display-hover material-icons w3-button">chevron_left</div>
         <div class="w3-display-right w3-display-hover material-icons w3-button">chevron_right</div>
         <div class="w3-display-bottommiddle w3-padding-small accent"><span id="slideNumber">1</span> of <span id="slideCount">5</span></div>
@@ -70,6 +70,11 @@ window.addEventListener('load', function () {
     <script>
 $('#openSidebar, #closeSidebar').click(function () {
   $('.sidebar').slideToggle(250);
+});
+      
+$(document).ready(function () {
+  var slideshow = $('#slideShowDisplay');
+  slideshow.css({width:'100%', height:slideshow.width() * (3/4)});
 });
     </script>
   </body>
