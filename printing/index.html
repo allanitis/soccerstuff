@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://smith2021.github.io/hermes/w3.css"/>
+    <link rel="stylesheet" href="main.css"/>
+    <style>
+/*Fonts*/
+.roboto{font-family:'Roboto',Helvetica,sans-serif;}
+.mono{font-family:'Roboto Mono',Courier;}
+.thin{font-weight:300;}
 
+/*Palette*/
+.dark{background:#455A64;}
+.primary{background:#607D8B;}
+.light{background:#CFD8DC;}
+.accent{background: #536DFE; }
+.divider{border-color:#BDBDBD;}
+.dark,.primary,.accent{color:#ffffff}
+.light{color:#000000;}
+
+/*Buttons*/
+.fab{border:none;border-radius:50%;font-size:24px;height:56px;margin:auto;min-width:56px;width:56px;padding:0;overflow:hidden;box-shadow:0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);position:relative;line-height:normal}
+.raised{border:none;border-radius:2px;position:relative;height:36px;margin:0;min-width:64px;padding:0 16px;display:inline-block;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:0;overflow:hidden;outline:0;cursor:pointer;text-decoration:none;text-align:center;line-height:36px;vertical-align:middle}
+
+/*Sidebar*/
+.sidebar{position:fixed;top:0;height:100%;width:25%;z-index:99;background-color:#ffffff;}
+    </style>
+  </head>
+  <body>
+    <div class="w3-bar accent roboto w3-padding-small w3-large">
+      <i class="material-icons w3-bar-item" style="cursor:pointer" id="openSidebar">menu</i>
+      <a href="https://www.youtube.com/watch?v=jeKv0aJK03Y"><div class="w3-bar-item w3-right">Video</div></a>
+      <a href="/forwards/"><div class="w3-bar-item w3-right">Printrbot Guide</div></a>
+      <a href="/"><div class="w3-bar-item w3-right">soccerstuff</div></a>
+    </div>
+    <div class="sidebar roboto" hidden>
+      <div class="w3-xlarge w3-padding material-icons primary" style="cursor:pointer;width:100%" id="closeSidebar">close</div>
+      <div class="w3-padding-large" style="text-align:center">
+        <a href="/"><button class="raised accent">Home</button></a>
+        <hr class="divider"/>
+        <a href=""><button class="raised accent">Printrbot Guide</button></a>
+        <hr class="divider"/>
+        <a href="https://www.youtube.com/watch?v=jeKv0aJK03Y"><button class="raised accent">Video</button></a>
+      </div>
+    </div>
+    <div class="w3-padding-large roboto">
+      <h2>SmittyCraft</h2>
+      <p class="w3-large">This page is really just a template. As you may have noticed, the links on the navigation bar do not work. The design is clean, simple, and based on Google's material design. I tried to learn how to use <a href="https://getmdl.io">Material Design Lite</a>, but it was confusing and their example code did not really work. Because of this, I created this page where I replicate their features with simpler, JavaScript-free versions of Material components using <a href="https://www.w3schools.com/w3css/">W3CSS</a>.</p>
+      <p class="w3-large">FAB Button:</p>
+      <button class="fab accent">
+        <i class="material-icons">file_download</i>
+        </button>
+      <pre><code class="html">&lt;button class="fab accent"&gt;
+  &lt;i class="material-icons"&gt;file_download&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+      <p class="w3-large">Raised Button:</p>
+      <button class="raised accent">Button</button>
+      <pre><code class="html">&lt;button class="raised accent"&gt;Button&lt;/button&gt;</code></pre>
+    </div>
+    <script>
+window.addEventListener('load', function () {
+  document.getElementsByTagName('head')[0].innerHTML += '<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300" rel="stylesheet">';
+});
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+$('#openSidebar, #closeSidebar').click(function () {
+  $('.sidebar').slideToggle(250);
+});
+    </script>
+  </body>
+</html>
