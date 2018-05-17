@@ -82,7 +82,8 @@ $(document).ready(function () {
 });
 
 function updateSlides () {
-  
+  $('#slideShowDisplay').css({backgroundImage: 'url(' + images[slideIndex].url + ')'});
+  $('#slideNumber').text(slideIndex + 1);
 }
 
 $('#slideBack').click(function () {
@@ -91,7 +92,7 @@ $('#slideBack').click(function () {
   } else {
     slideIndex--;
   }
-  $('#slideShowDisplay').css({backgroundImage: 'url(' + images[slideIndex].url + ')'});
+  updateSlides();
 });
 
 $('#slideForward').click(function () {
@@ -100,7 +101,7 @@ $('#slideForward').click(function () {
   } else {
     slideIndex++;
   }
-  $('#slideShowDisplay').css({backgroundImage: 'url(' + images[slideIndex].url + ')'});
+  updateSlides();
 });
     </script>
   </body>
