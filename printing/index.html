@@ -56,8 +56,8 @@
 </div>
       <h3>Images // SD Card Removal</h3>
       <div class="w3-display-container w3-light-grey" id="slideShowDisplay" style="height:300px;width:400px;background-position:center;background-size:cover;">
-        <div class="w3-display-left w3-display-hover material-icons w3-button">chevron_left</div>
-        <div class="w3-display-right w3-display-hover material-icons w3-button">chevron_right</div>
+        <div class="w3-display-left w3-display-hover material-icons w3-button accent" id="slideBack">chevron_left</div>
+        <div class="w3-display-right w3-display-hover material-icons w3-button accent" id="slideForward">chevron_right</div>
         <div class="w3-display-bottommiddle w3-padding-small accent"><span id="slideNumber">1</span> of <span id="slideCount">5</span></div>
       </div>
     </div>
@@ -72,9 +72,35 @@ $('#openSidebar, #closeSidebar').click(function () {
   $('.sidebar').slideToggle(250);
 });
       
+var images=[{url:"https://joshandjames.github.io/printing/images/board.jpg",caption:"The board, located behind the touch screen"},{url:"https://joshandjames.github.io/printing/images/card.jpg",caption:"The micro SD card containing print files"},{url:"https://joshandjames.github.io/printing/images/removal.jpg",caption:"Accessing the board"},{url:"https://joshandjames.github.io/printing/images/remove-screen-two.jpg",caption:"Removing screen after taking off screws"}];
+var slideIndex = 0;
+
 $(document).ready(function () {
   var slideshow = $('#slideShowDisplay');
-  slideshow.css({backgroundImage: 'https://joshandjames.github.io/printing/images/board.jpg'});
+  slideshow.css({backgroundImage: 'url(https://joshandjames.github.io/printing/images/board.jpg)'});
+  $('#slideCount').text(images.length);
+});
+
+function updateSlides () {
+  
+}
+
+$('#slideBack').click(function () {
+  if (slideIndex === 0) {
+    slideIndex = 3;
+  } else {
+    slideIndex--;
+  }
+  $('#slideShowDisplay').css({backgroundImage: 'url(' + images[slideIndex].url + ')'});
+});
+
+$('#slideForward').click(function () {
+  if (slideIndex === 3) {
+    slideIndex = 0;
+  } else {
+    slideIndex++;
+  }
+  $('#slideShowDisplay').css({backgroundImage: 'url(' + images[slideIndex].url + ')'});
 });
     </script>
   </body>
